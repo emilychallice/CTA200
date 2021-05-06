@@ -1,0 +1,29 @@
+ 2002  cd CTA200
+ 2003  git init
+ 2004  git remote add origin https://github.com/emilychallice/CTA200.git
+ 2005  vim README.md
+ 2006  vim LICENSE
+ 2007  git add README.md
+ 2008  git add LICENSE
+ 2009  git commit -m "Added readme and license files"
+ 2010  git config user.email "emily.crawley@mail.utoronto.ca"
+ 2011  git config user.name "emilychallice"
+ 2012  git commit -m "Added readme and license files"
+ 2013  mkdir assignment_1
+ 2014  cp ~/Documents/CTA200H-master/assignment1_2020/{average.c,average.h,main.c} ~/Documents/CTA200/assignment_1/
+ 2015  cd assignment_1
+ 2016  vim Makefile
+ 2017  make
+ 2018  ./main
+ 2019  git add Makefile
+ 2020  git add main.c average.c average.h
+ 2021  git commit -m "Added C files and Makefile"
+ 2022  git push origin master
+ 2023  vim main.c
+ 2024  make
+ 2025  ./main
+ 2026  git add main.c
+ 2027  git commit -m "Added another test case to main.c"
+ 2028  git push origin master
+ 2029  history > history.txt
+ 2030  history | tail -29 > history.txt
