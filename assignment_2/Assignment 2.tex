@@ -55,7 +55,7 @@ $I(0) = 1, S(0)=999, R(0) = 0$
 
 $N=1000$, $0\leq t \leq 200$
 
-Since $\beta$ represents an infection rate and $\gamma$ represents a recovery rate, we will select some meaningful variations on these parameters.
+$\beta$ represents an infection rate and $\gamma$ represents a recovery rate, so we will select some meaningful variations on these parameters, i.e. a disease that spreads quickly but has a fast recovery rate, a disease that spreads quickly with a slower recovery rate, etc.
 
 Using \texttt{scipy.integrate.solve\_ivp} as the ODE integrator, which takes parameters \texttt{(fun, tspan, y0)}. We set up the time derivative functions as a vector $[\frac{dS}{dt},\frac{dI}{dt},\frac{dR}{dt}]$ for the \texttt{fun} parameter, and the initial conditions vector $[S(0), I(0), R(0)]$ as \texttt{y0}. We also specify the parameter \texttt{vectorized=True} so that the integrator handles the vectors properly. We will use its default Runge-Kutta method, \texttt{method='RK45'}.
 	
